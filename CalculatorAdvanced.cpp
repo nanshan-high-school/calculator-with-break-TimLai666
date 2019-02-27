@@ -2,7 +2,7 @@
 #include <math.h>
 using namespace std;
 float first(void);
-void gowhile(float);
+float gowhile(float);
 float makefloat(string);
 int stringlen(string);
 int reallen(string);
@@ -14,7 +14,8 @@ float di(float, float);
 
 int main() {
     float firstn = first();
-    gowhile(firstn);
+    float total = gowhile(firstn);
+    cout << "\n答案是：" << total;
 }
 
 
@@ -28,19 +29,20 @@ float first(void) {
 
 
 // 重複執行直到'='
-void gowhile(float total) {
+float gowhile(float total) {
+    string num;
+    float mathnum = 0;
     while(true) {
-        string num;
-        float mathnum = 0;
         cout << "請輸入運算符號與數字(ex: +5.2):";
         cin >> num;
+        cout << num;
         if(num[0] == '=') {
             break;
         }
         mathnum = makefloat(num);
         total = selectfunction(num, total, mathnum);
     }
-    cout << "\n答案是：" << total;
+    return total;
 }
 
 
@@ -49,6 +51,7 @@ float makefloat(string num) {
     float floatnum = 0;
     int len = stringlen(num);
     int real = reallen(num);
+    int pown = 0;
     real--;// 為了配合pow使用
 
     for(int i = 1/* 跳過運算符號 */; i < len; i++) {
@@ -58,7 +61,8 @@ float makefloat(string num) {
         }
 
         num[i] -= '0';
-        floatnum += num[i] * pow(10, real);
+        pown = pow(10, real);
+        floatnum += num[i] * pown;
         real--;
 
     }
