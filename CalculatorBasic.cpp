@@ -30,7 +30,7 @@ int addit(void) {
   
   do {
     int inp = 0;
-    cout << "輸入數字";
+    cout << "輸入整數";
     cin >> inp;
     if(inp == 0) {
       break;
@@ -49,7 +49,7 @@ int miit(void) {
   int i = 0;
   do {
     int inp = 0;
-    cout << "輸入數字";
+    cout << "輸入整數";
     cin >> inp;
     if(i == 0) {
       mi = inp;
@@ -73,7 +73,7 @@ int muit(void) {
 
   do {
     int inp = 0;
-    cout << "輸入數字";
+    cout << "輸入整數";
     cin >> inp;
     
     if(inp == 0) {
@@ -93,7 +93,7 @@ float diit(void) {
   int i = 0;
   do {
     float inp = 0;
-    cout << "輸入數字";
+    cout << "輸入整數";
     cin >> inp;
     if(i == 0) {
       di = inp;
