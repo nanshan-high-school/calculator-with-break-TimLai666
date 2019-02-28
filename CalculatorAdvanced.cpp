@@ -47,10 +47,9 @@ float gowhile(float total) {
 
 // make string into float
 float makefloat(string num) {
-    float floatnum = 0;
+    float floatnum = 0, pown = 0;
     int len = stringlen(num);
     int real = reallen(num);
-    float pown = 0;
     real--;// 為了配合pow使用
 
     for(int i = 1/* 跳過運算符號 */; i < len; i++) {
