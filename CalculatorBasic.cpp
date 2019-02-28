@@ -28,7 +28,7 @@ int main() {
 int addit(void) {
   int add = 0;
   
-  do {
+  while(true) {
     int inp = 0;
     cout << "輸入整數";
     cin >> inp;
@@ -37,7 +37,7 @@ int addit(void) {
     }else {
       add += inp;
     }
-  }while(true);
+  } 
 
   return add;
 }
@@ -47,7 +47,7 @@ int addit(void) {
 int miit(void) {
   int mi = 0;
   int i = 0;
-  do {
+  while(true) {
     int inp = 0;
     cout << "輸入整數";
     cin >> inp;
@@ -61,7 +61,7 @@ int miit(void) {
     }else {
       mi -= inp;
     }
-  }while(true);
+  } 
 
   return mi;
 }
@@ -71,7 +71,7 @@ int miit(void) {
 int muit(void) {
   int mu = 1;
 
-  do {
+  while(true) {
     int inp = 0;
     cout << "輸入整數";
     cin >> inp;
@@ -81,7 +81,7 @@ int muit(void) {
     }else {
       mu *= inp;
     }
-  }while(true);
+  } 
 
   return mu;
 }
@@ -91,7 +91,7 @@ int muit(void) {
 float diit(void) {
   float di = 0;
   int i = 0;
-  do {
+  while(true) {
     float inp = 0;
     cout << "輸入整數";
     cin >> inp;
@@ -106,7 +106,7 @@ float diit(void) {
     }else {
       di /= inp;
     }
-  }while(true);
+  } 
 
   return di;
 }
