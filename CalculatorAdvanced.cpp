@@ -15,7 +15,7 @@ float di(float, float);
 int main() {
     float firstn = first();
     float total = gowhile(firstn);
-    cout << "\n答案是：" << total;
+    cout << "答案是：" << total;
 }
 
 
@@ -35,7 +35,6 @@ float gowhile(float total) {
     while(true) {
         cout << "請輸入運算符號與數字(ex: +5.2):";
         cin >> num;
-        cout << num;
         if(num[0] == '=') {
             break;
         }
@@ -84,7 +83,7 @@ int stringlen(string num) {
 // 計算整數部分長度
 int reallen(string num) {
     int real = 0;
-    for(int i = 1/* 跳過運算符號 */; num[i] != '.' || num[i] != '\0'; i++) {
+    for(int i = 1/* 跳過運算符號 */; num[i] != '.' && num[i] != '\0'; i++) {
         real++;
     }
     return real;
@@ -131,7 +130,7 @@ float mul(float total, float mathnum) {
 // 除法
 float di(float total, float mathnum) {
     if(mathnum == 0) {
-        cout << "\n無法除以0";
+        cout << "無法除以0\n";
     }else{
         total /= mathnum;
     }
