@@ -33,7 +33,7 @@ float gowhile(float total) {
     string num;
     float mathnum = 0;
     while(true) {
-        cout << "請輸入運算符號與數字(ex: +5.2):";
+        cout << "請輸入運算符號與數字(ex: +5.2)(輸入 = 獲取答案):";
         cin >> num;
         if(num[0] == '=') {
             break;
@@ -50,7 +50,7 @@ float makefloat(string num) {
     float floatnum = 0;
     int len = stringlen(num);
     int real = reallen(num);
-    int pown = 0;
+    float pown = 0;
     real--;// 為了配合pow使用
 
     for(int i = 1/* 跳過運算符號 */; i < len; i++) {
