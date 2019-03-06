@@ -1,16 +1,16 @@
 #include <iostream>
 #include <math.h>
 using namespace std;
-float first(void);
-float gowhile(float);
-float makefloat(string);
-int stringlen(string);
-int reallen(string);
-float selectfunction(string, float, float);
-float add(float, float);
-float mi(float, float);
-float mul(float, float);
-float di(float, float);
+float first(void);  // the first num
+float gowhile(float);  // 重複執行直到'='
+float makefloat(string);  // make string into float
+int stringlen(string);  // see how long the num is
+int reallen(string);  // 計算整數部分長度
+float selectfunction(string, float, float);  // 決定運算方式
+float add(float, float);  // 加法
+float mi(float, float);  // 減法
+float mul(float, float);  // 乘法
+float di(float, float);  // 除法
 
 int main() {
     float firstn = first();
@@ -99,6 +99,8 @@ float selectfunction(string num, float total, float mathnum) {
         total = mul(total, mathnum);
     }else if(num[0] == '/') {
         total = di(total, mathnum);
+    }else {
+        cout << "不支援的計算方式\n";
     }
 
     return total;
