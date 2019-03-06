@@ -19,6 +19,8 @@ int main() {
     total = muit();
   }else if(how == "/") {
     total = diit();
+  }else {
+    cout << "不支援的計算方式\n";
   }
 
   cout << "答案: " << total;
